@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Parent-Teacher App – System Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:Poppins, sans-serif; background:#f6f8fb; color:#222; }
+    header { background:linear-gradient(135deg,#4f46e5,#6366f1); color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { font-size:2.5rem; margin-bottom:10px; }
+    header p { max-width:900px; margin:auto; font-size:1.1rem; }
+    section { padding:60px 20px; max-width:1200px; margin:auto; }
+    h2 { color:#4f46e5; margin-bottom:20px; }
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+    .card { background:#fff; border-radius:16px; padding:24px; box-shadow:0 10px 25px rgba(0,0,0,.08); }
+    .card h3 { margin-top:0; color:#111; }
+    ul { padding-left:20px; }
+    .diagram { background:#111827; color:#e5e7eb; border-radius:16px; padding:20px; font-family:monospace; white-space:pre-wrap; }
+    footer { background:#111827; color:#9ca3af; text-align:center; padding:30px 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>School Parent–Teacher App</h1>
+  <p>Native Android (Kotlin) System Design & Technical Architecture – Converted into a Responsive Website</p>
+</header>
+
+<section>
+  <h2>1. Functional Modules</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Core Communication</h3>
+      <ul>
+        <li>Smart Feed (Circulars & Messages)</li>
+        <li>Firebase Push Notifications</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Academic Management</h3>
+      <ul>
+        <li>Timetable & Syllabus</li>
+        <li>Homework & Assignments</li>
+        <li>Attendance Analytics</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Administrative Services</h3>
+      <ul>
+        <li>Leave & Gate Pass</li>
+        <li>Service Desk Tickets</li>
+        <li>Appointment Booking</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Financials</h3>
+      <ul>
+        <li>Fee Billing & Payments</li>
+        <li>No-Dues Clearance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>2. Functional Architecture Diagram</h2>
+  <div class="diagram">
+[ Native Android App (Kotlin) ]
+   |
+   +-- Core Communication
+   |     - Smart Feed
+   |     - Notifications (FCM)
+   |
+   +-- Academic Management
+   |     - Timetable
+   |     - Assignments
+   |     - Attendance Charts
+   |
+   +-- Administrative Services
+   |     - Leave Management
+   |     - Service Requests
+   |
+   +-- Financial Services
+         - Fee Payment
+         - Clearance Status
+  </div>
+</section>
+
+<section>
+  <h2>3. Architecture Pattern</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Client Side (Android)</h3>
+      <ul>
+        <li>MVVM Architecture</li>
+        <li>Activities & Fragments</li>
+        <li>ViewModel + LiveData</li>
+        <li>Room Database (Offline)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Backend (Firebase)</h3>
+      <ul>
+        <li>Firebase Authentication</li>
+        <li>Firestore Database</li>
+        <li>Cloud Functions</li>
+        <li>Cloud Storage</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>4. Technology Stack</h2>
+  <div class="card-grid">
+    <div class="card"><strong>Language:</strong> Kotlin</div>
+    <div class="card"><strong>UI:</strong> XML / Jetpack Compose</div>
+    <div class="card"><strong>Networking:</strong> Retrofit + Firestore</div>
+    <div class="card"><strong>Charts:</strong> MPAndroidChart</div>
+    <div class="card"><strong>Payments:</strong> Razorpay / Stripe</div>
+    <div class="card"><strong>Security:</strong> Biometrics, Encrypted Storage</div>
+  </div>
+</section>
+
+<section>
+  <h2>5. Security & Reliability</h2>
+  <div class="card">
+    <ul>
+      <li>Biometric Authentication for sensitive actions</li>
+      <li>EncryptedSharedPreferences</li>
+      <li>Crashlytics & Monitoring</li>
+      <li>Code Obfuscation (R8/Proguard)</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 School Management Architecture | Designed for Native Android + Firebase</p>
+</footer>
+
+</body>
+</html>
